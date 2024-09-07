@@ -1,0 +1,229 @@
+:root {
+    
+--Soft-blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+
+
+
+--Very-dark-blue : hsl(217, 54%, 11%);                      /* (main BG) */
+--Dark-blue: hsl(216, 50%, 16%);                /*  (card BG) */
+--Blue : hsl(215, 32%, 27%);                 /* (line) */
+--White: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Outfit", sans-serif;
+}
+body {
+    font-size: 1.8rem;
+    background-color: var(--Very-dark-blue);
+    min-height: 100vh;
+    padding: 4rem .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+a {
+    text-decoration: none;
+    
+}
+.container {
+    
+    width: 95%;
+    max-width: 32rem;
+    background-color: var(--Dark-blue);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.3rem 1rem;
+}
+.main-header {
+    
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+/* .main-header.imagen {
+    width: 80vw;
+    border-radius: 1rem;
+    display: flex;
+} */
+
+.image-wrapper {
+    position: relative;
+    width: 100%; /* Mantiene el ancho total del contenedor */
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Oculta cualquier contenido fuera de los bordes */
+  }
+  
+  .image-wrapper .imagen {
+    max-width: 28rem;
+    width: 80vw;
+    border-radius: 1rem;
+    display: flex;
+    cursor: pointer;
+    /* width: 100%;
+    border-radius: 1rem;
+    transition: transform 0.3s ease; */
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 255, 0.5); /* Cyan con opacidad */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .view-icon {
+    width: 3rem; /* Ajusta el tamaño del ícono del ojo */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image-wrapper:hover .overlay {
+    opacity: 1;
+  }
+  
+  .image-wrapper:hover img {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen al hacer hover */
+    cursor: pointer;
+  }
+  
+  .image-wrapper:hover .view-icon {
+    opacity: 1;
+  }
+
+.info {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    gap: 2rem;
+    margin-top: 1rem;
+    padding-left: .6rem;
+}
+.info h1 {
+    font-size: 7vw;
+    color: var(--White);
+    font-weight: 600;
+}
+.info h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.info p {
+    color: var(--Soft-blue);
+    font-size: 4vw;
+    line-height: 1.8;
+}
+.data {
+    display: flex;
+    justify-content: space-between;
+}
+.type-coin {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.type-coin p {
+    font-size: 4.5vw;
+    color: var(--Cyan);
+    font-weight: 500;
+}
+.date {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+.date p {
+    font-size:5vw;
+}
+.separator {
+    border: none;
+    width: 95%;
+    border-top: solid .1rem var(--Blue);
+}
+footer {
+    display: flex;
+    align-items: center;
+    padding-left: .1rem;
+    gap: .9rem;
+}
+footer img {
+    border: .1rem solid var(--White);
+    border-radius: 50%;
+    width: 10vw;
+}
+footer p {
+    font-size: 3.7vw;
+    color: var(--Soft-blue);
+}
+footer a {
+    color: var(--White);
+    font-weight: 500;
+}
+footer a:hover {
+color: var(--Cyan);
+}
+
+@media (min-width: 300px) and (max-width: 1920px) {
+    /* .main-header img {
+        width: 95%;
+    } */
+    .view-icon {
+        width: 3rem; /* Ajusta el tamaño del ícono del ojo */
+        
+      }
+    .info {
+        padding-left: 1rem;
+    }
+    .info h1 {
+        font-size: 2rem;
+        
+    }
+    .info p {
+        font-size: 1.6rem;   
+    }
+    .type-coin img {
+        width: 1.5rem;
+    }
+    .type-coin p {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: var(--Cyan);
+    }
+    .date {
+        display: flex;
+        align-items: center;
+        gap: .6rem;
+    }
+    .date img  {
+        width: 1.9rem;
+    }
+    .date p {
+        font-size: 1.7rem;
+    }
+    footer {
+        padding-left: .5rem;
+    }
+    footer img {
+        
+        width:3rem;
+    }
+    footer p {
+        font-size: 1.3rem;
+        
+    }
+}
